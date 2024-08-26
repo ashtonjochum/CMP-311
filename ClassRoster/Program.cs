@@ -2,7 +2,7 @@
 using ClassRoster;
 
 class Program
-{//github testing
+{
     static void Main(string[] args)
     {
         Instructor teacher = new Instructor(); // makes a new blank Instructor
