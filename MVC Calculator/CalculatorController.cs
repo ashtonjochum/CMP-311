@@ -13,10 +13,10 @@
             {
                 calcView.printString("Input first number: ");
                 calcModel.Number1 = calcView.getDoubleFromUser();
-                string op = calcView.printOptions();
+                string tempOp = calcView.printOptions();
                 calcView.printString("Input second number: ");
                 calcModel.Number2 = calcView.getDoubleFromUser();
-                double result = calcModel.doOperation(op);
+                double result = calcModel.doOperation(tempOp);
                 if (double.IsNaN(result))
                 {
                     calcView.printString("An error has occured and the operation could not be performed.\n\n");
@@ -30,7 +30,7 @@
             }
             
             
-\
+
         }
     }
 }

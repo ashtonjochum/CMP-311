@@ -1,4 +1,6 @@
-﻿namespace Calculator
+﻿using System.Text.RegularExpressions;
+
+namespace Calculator
 {
     class CalculatorView
     {
@@ -9,15 +11,26 @@
 
         public string printOptions()
         {
-            Console.WriteLine("Choose an operator from the following list:");
-            Console.WriteLine("\ta - Add");
-            Console.WriteLine("\ts - Subtract");
-            Console.WriteLine("\tm - Multiply");
-            Console.WriteLine("\td - Divide");
-            Console.Write("Your option? ");
-            string op = Console.ReadLine();
-            Console.WriteLine("\n");
+            string op = "";
+            while (op == "")
+            {
+                Console.WriteLine("Choose an operator from the following list:");
+                Console.WriteLine("\ta - Add");
+                Console.WriteLine("\ts - Subtract");
+                Console.WriteLine("\tm - Multiply");
+                Console.WriteLine("\td - Divide");
+                Console.Write("Your option? ");
+                op = Console.ReadLine();
+                if (op == null || !Regex.IsMatch(op, "[a|s|m|d]"))
+                {
+                    Console.WriteLine("Error: Invalid Input");
+                    op = "";
+                }
+                Console.WriteLine("\n");
+             
+            }
             return op;
+
         }
 
         public double getDoubleFromUser()
