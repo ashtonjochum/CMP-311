@@ -22,8 +22,8 @@ namespace MVC_Class_Roster
 
         public void setInstructor(string firstName, string lastName, string contactInfo)
         {
-            teacher.FirstName=firstName;
-            teacher.LastName=lastName;
+            teacher.FirstName = firstName;
+            teacher.LastName = lastName;
             teacher.ContactInfoformation = contactInfo;
         }
 
