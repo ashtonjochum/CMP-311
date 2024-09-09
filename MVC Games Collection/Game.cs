@@ -38,7 +38,7 @@ namespace MVC_Games_Collection
 
         public override string ToString()
         {
-            return this.Name + " " + this.TimeToPlay;
+            return "Game: " + this.Name + " takes " + this.TimeToPlay + " to play";
         }
 
 

@@ -36,7 +36,7 @@ namespace MVC_Games_Collection
 
         public override string ToString()
         {
-            return this.Genere + " " + this.AgeRange;
+            return "Genere: " + this.Genere + " Ages: " + this.AgeRange;
         }
     }
 }
