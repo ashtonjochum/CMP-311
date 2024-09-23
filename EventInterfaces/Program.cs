@@ -42,7 +42,7 @@ public class EventInfo
 
     public override string ToString()
     {
-        return "Id: " + eventId.ToString() + " " + "Description: " + eventDescription.ToString() + " " + "Cost: " + eventCost.ToString();
+        return "\nId: " + eventId.ToString() + "\nDescription: " + eventDescription.ToString() + "\nCost: " + eventCost.ToString();
     }
 }
 
@@ -57,12 +57,12 @@ public class Event : IGraduation, IRetirement
 
     public void PrintGraduationInfo()
     {
-        Console.WriteLine("Graduation Party Information:" + theEvent.ToString());
+        Console.WriteLine("Graduation Party Information: " + theEvent.ToString());
     }
 
     public void PrintRetirementInfo()
     {
-        Console.WriteLine("Retirement Party Information:" + theEvent.ToString());
+        Console.WriteLine("Retirement Party Information: " + theEvent.ToString());
     }
 
     public void PrintEventCost()
@@ -88,9 +88,11 @@ public class Program
         Event myEvent = new Event("Test Event", "This is a test of the Event class", 1000000.00);
 
         graduationEvent.PrintGraduationInfo();
+        Console.WriteLine("");
+        
         retirementEvent.PrintRetirementInfo();
-        myEvent.PrintEventCost();
-        myEvent.ToString();
+        Console.WriteLine("");
+        
 
         Console.WriteLine("Graduation: " + graduationEvent + "\nRetirement: " + retirementEvent + "\nTest: " + myEvent);
     }
